@@ -33,7 +33,9 @@ const BookFinder = () => {
       if (formData.year) params.first_publish_year = formData.year;
       if (formData.language) params.language = formData.language;
     
-      const response = await axios.get(import.meta.env.VITE_APP_API_URL, {
+      // const response = await axios.get(import.meta.env.VITE_APP_API_URL, {
+        const response = await axios.get('https://openlibrary.org/search.json', {
+
         params: params 
       });
 
